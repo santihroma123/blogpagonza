@@ -36,6 +36,6 @@ Route::get('/post', function () {
     return view('createPost');
 })->middleware(CheckSession::class);
 
-Route::post('/post/create', [PostController::class, 'createPost'])->middleware(CheckSession::class);
+Route::post('/register/create', [UserController::class, 'createUser']);
 
 Route::get('/logout', [UserController::class, 'cerrarSesion'])->middleware(CheckSession::class);
